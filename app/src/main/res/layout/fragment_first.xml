@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="firstFragmentViewModel"
+            type="com.example.tillnow.firstfragment.FirstFragmentViewModel" />
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:context=".firstfragment.FirstFragment">
+
+    <TextView
+        android:id="@+id/text"
+        android:text="@{firstFragmentViewModel.currentValue.toString()}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:onClick="@{()->firstFragmentViewModel.onClick()}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"/>
+
+    <Button
+        android:text="@string/next_fragment"
+        android:id="@+id/next_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+</layout>
